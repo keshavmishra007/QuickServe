@@ -1,104 +1,39 @@
-![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
-![Express.js](https://img.shields.io/badge/Express.js-Framework-black)
-![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
-![License](https://img.shields.io/badge/License-Educational-lightgrey)
-#🚀 QuickServe – Local Service Booking Platform
+# 🚀 QuickServe – Local Service Booking Platform
 
-QuickServe is a web-based platform that connects users with local service providers such as electricians, plumbers, cleaners, and other home services.
+QuickServe is a web-based platform that connects users with local service providers such as electricians, plumbers, cleaners, and other home services.  
+It simplifies the process of discovering, viewing, and booking local services through an easy-to-use interface.
 
-The platform simplifies the process of discovering, viewing, and booking local services through an easy-to-use interface.
-
-This project was developed as a full‑stack web application for a minor academic project, demonstrating the integration of frontend development, backend APIs, and database systems.
+This project was developed as a **full‑stack web application** for a minor academic project, demonstrating the integration of frontend development, backend APIs, and database systems.
 
 ---
 
-##📌 Project Overview
-In many cities, especially smaller ones, finding reliable service providers often relies on word-of-mouth or manual searching.
+## 📌 Project Overview
+In many cities, especially smaller ones, finding reliable service providers often relies on word-of-mouth or manual searching.  
 
 QuickServe aims to solve this problem by providing a centralized digital platform where users can:
-
-• Browse available services
-
-• View service providers
-
-• Submit booking requests
-
-• Automatically notify providers via email
+- Browse available services
+- View service providers
+- Submit booking requests
+- Automatically notify providers via email
 
 ---
 
-##✨ Current Features
-The current version of QuickServe (Minor Project Version) includes the following implemented features.
-
-**📋 Service Category Listing**
-Users can browse different types of services such as:
-
-• Electricians
-
-• Plumbers
-
-• Other local services
+## ✨ Current Features
+- **📋 Service Category Listing** – Browse services like electricians, plumbers, and more.  
+- **👨‍🔧 Provider Listing System** – Displays provider details (name, service type, contact info, service area).  
+- **📅 Service Booking Interface** – Submit booking requests via a form.  
+- **📧 Email Notification System** – Automatic email notifications using Nodemailer.  
+- **🔎 Category-Based Filtering** – Filter providers by service category.  
+- **💾 Database Integration** – MySQL database stores providers and bookings.  
+- **🔗 REST API Backend** – Node.js + Express.js APIs for service listing & booking management.  
+- **🌐 Simple Web Interface** – Built with HTML, CSS, and JavaScript.  
 
 ---
 
-**👨‍🔧 Provider Listing System**
-The platform displays service providers along with important details such as:
+## 🧩 System Architecture
 
-• Provider Name
-
-• Service Type
-
-• Contact Information
-
-• Service Area
-
----
-
-**📅 Service Booking Interface**
-Users can submit a booking request by filling out a booking form with necessary details.
-
----
-
-**📧 Email Notification System**
-When a booking is created, an automatic email notification is sent to the service provider using Nodemailer.
-
----
-
-**🔎 Category-Based Filtering**
-Users can view providers based on selected service categories.
-
----
-
-**💾 Database Integration**
-All providers and booking data are stored in a MySQL relational database.
-
----
-
-**🔗 REST API Backend**
-The backend is built using Node.js and Express.js, which exposes REST APIs for:
-
-• service listing
-
-• booking management
-
----
-
-**🌐 Simple Web Interface**
-A clean and simple interface built using:
-
-• HTML
-
-• CSS
-
-• JavaScript
-
-This allows users to easily navigate and interact with the platform.
-
----
-
-##🧩 System Architecture
 QuickServe follows a client-server architecture.
-
+```
 User (Browser)
       │
       │ HTTP Requests
@@ -112,6 +47,7 @@ Backend (Node.js + Express.js)
       │ SQL Queries
       ▼
 MySQL Database
+```
 This architecture separates:
 
 **• Presentation Layer**
@@ -124,120 +60,145 @@ making the application easier to maintain and scale.
 
 ---
 
-##🛠 Tech Stack
-**Frontend**
-• HTML5
+## 🛠 Tech Stack
 
-• CSS3
-
-• JavaScript
-
-**Backend**
-• Node.js
-
-• Express.js
-
-**Database**
-• MySQL
-
-**Tools**
-• Git
-
-• GitHub
-
-• VS Code
-
-• Postman
+![HTML](https://img.shields.io/badge/HTML-Frontend-orange)
+![CSS](https://img.shields.io/badge/CSS-Styles-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-Logic-yellow)
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
+![Express](https://img.shields.io/badge/Express.js-Framework-black)
+![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
 
 ---
 
-##📂 Project Structure
+## 📂 Project Structure
+```
 QuickServe
 │
 ├── frontend
-│   ├── index.html
-│   ├── categories.html
-│   ├── services.html
-│   ├── css/
-│   └── js/
+│ ├── index.html
+│ ├── categories.html
+│ ├── services.html
+│ ├── css/
+│ └── js/
 │
 ├── backend
-│   ├── server.js
-│   ├── routes/
-│   ├── config/
-│   ├── node_modules/
-│   └── package.json
+│ ├── server.js
+│ ├── routes/
+│ ├── config/
+│ ├── node_modules/
+│ └── package.json
 │
 └── README.md
+```
 
 ---
 
-##⚙️ Installation & Setup
-**1️⃣ Clone the repository**
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
 git clone https://github.com/yourusername/QuickServe.git
+```
 
 ---
 
-**2️⃣ Navigate to backend folder**
+### 2️⃣ Navigate to backend folder
+
+```bash
 cd backend
+```
 
 ---
 
-**3️⃣ Install dependencies**
+### 3️⃣ Install dependencies
+
+```bash
 npm install
+```
 
 ---
 
-**4️⃣ Configure environment variables**
-Create a .env file in the backend directory:
+### 4️⃣ Configure environment variables
 
+Create a `.env` file in the backend directory:
+
+```env
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_database_password
 DB_NAME=quickserve
 PORT=5000
+```
 
 ---
 
-**5️⃣ Run the backend server**
+### 5️⃣ Run the backend server
+
+```bash
 node server.js
+```
+
 or
 
+```bash
 npx nodemon server.js
+```
 
 ---
 
-**6️⃣ Run the frontend**
+### 6️⃣ Run the frontend
+
 Open the frontend files in your browser or run them using a local server.
 
-##🔌 API Endpoints
-**Get All Providers**
+---
+
+## 🔌 API Endpoints
+
+### Get All Providers
+
+```http
 GET /api/providers
+```
+
 Returns a list of all service providers.
 
 ---
 
-**Get Providers by Service Category**
+### Get Providers by Service Category
+
+```http
 GET /api/providers/by-service/:service
+```
+
 Example:
+
+```http
 GET /api/providers/by-service/electrician
+```
 
 ---
 
-**Create a Booking**
+### Create a Booking
+
+```http
 POST /api/bookings
+```
+
 Example request body:
 
+```json
 {
   "providerId": 2,
   "customerAddress": "Civil Lines, Rewa",
   "bookingDate": "2025-01-15",
   "timeSlot": "10:00 AM - 12:00 PM"
 }
+```
 
 ---
-
-##📸 Screenshots
+## 📸 Screenshots
 
 **• Home Page**
 <img width="1837" height="908" alt="Screenshot 2026-03-08 195127" src="https://github.com/user-attachments/assets/f93a6ce3-b3e3-4767-841c-b811f128c22e" />
@@ -259,7 +220,8 @@ Example request body:
 
 ---
 
-##🧪 Testing
+## 🧪 Testing
+
 The application was tested using:
 
 • **Postman** for API testing
@@ -270,7 +232,8 @@ The application was tested using:
 
 ---
 
-##🚧 Future Improvements
+## 🚧 Future Improvements
+
 The following features are planned for future development:
 
 • User authentication system (Customer / Provider login)
@@ -293,19 +256,26 @@ The following features are planned for future development:
 
 ---
 
-##👨‍💻 Contributors
+## 👨‍💻 Contributors
+
 **Keshav Mishra**
+
 Project Lead / Backend Development, Testing & integration
 
 **Sankalp Sohgaura**
+
 Frontend Development 
 
 ---
 
-##📜 License
+## 📜 License
+
 This project is developed for educational and learning purposes.
 
 ---
 
-##⭐ Support
-If you find this project useful, consider giving the r
+## ⭐ Support
+
+If you find this project useful, consider giving the repository a ⭐ on GitHub.
+
+
