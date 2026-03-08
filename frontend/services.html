@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Providers | QuickServe</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <div class="logo">Quick<span>Serve</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <!-- ================= PROVIDERS LIST ================= -->
+  <div class="provider-container">
+
+    <a
+      href="categories.html"
+      style="color:#a855f7; text-decoration:none; font-size:14px;"
+    >
+      <i class="fa-solid fa-arrow-left"></i> Back to Categories
+    </a>
+
+    <div style="margin-top:20px; margin-bottom:30px;">
+      <h1 id="serviceTitle" style="color:white;">Service</h1>
+      <p style="color:#777;">Top rated professionals near you</p>
+    </div>
+
+    <div id="providerList"></div>
+  </div>
+
+  <!-- ================= BOOKING MODAL ================= -->
+  <div id="bookingModal" class="modal-overlay">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2>
+          Book <span id="modalProviderName" class="highlight">Service</span>
+        </h2>
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+      </div>
+
+      <!-- ✅ FIXED FORM -->
+      <form id="bookingForm" onsubmit="confirmBooking(event)">
+
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" id="date" required />
+        </div>
+
+        <div class="form-group">
+          <label>Time Slot</label>
+          <select id="timeSlot" required>
+            <option value="">Select Time</option>
+            <option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</option>
+            <option value="12:00 PM - 02:00 PM">12:00 PM - 02:00 PM</option>
+            <option value="04:00 PM - 06:00 PM">04:00 PM - 06:00 PM</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Your Address</label>
+          <textarea
+            id="address"
+            placeholder="Enter your full address..."
+            rows="3"
+            required></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="primary-btn"
+          style="width:100%; margin-top:10px;"
+        >
+          Confirm Booking
+        </button>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= JS ================= -->
+  <script src="js/services.js"></script>
+</body>
+</html>

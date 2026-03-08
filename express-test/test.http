@@ -1,0 +1,10 @@
+POST http://localhost:5000/api/bookings
+Content-Type: application/json
+
+{
+  "providerId": 1,
+  "address": "Civil Lines, Rewa",
+  "date": "2025-12-23",
+  "timeSlot": "10:00 AM - 12:00 PM"
+}
+

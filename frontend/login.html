@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | QuickServe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Quick<span>Serve</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="login-page">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+            </div>
+            
+            <div class="social-icons">
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="User ID / Email" required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="Full Name" required>
+                <input type="email" class="input-field" placeholder="Email Id" required>
+                <input type="password" class="input-field" placeholder="Create Password" required>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>
