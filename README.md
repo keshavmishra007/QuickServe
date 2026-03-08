@@ -1,60 +1,103 @@
-🚀 QuickServe – Local Service Booking Platform
-QuickServe is a web-based platform designed to connect users with local service providers such as electricians, plumbers, cleaners, and other home services. The platform simplifies the process of finding reliable service providers by allowing users to browse services, view provider details, and make bookings online.
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
+![Express.js](https://img.shields.io/badge/Express.js-Framework-black)
+![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
+![License](https://img.shields.io/badge/License-Educational-lightgrey)
+#🚀 QuickServe – Local Service Booking Platform
 
-This project was developed as a full-stack web application for a minor academic project and demonstrates the integration of frontend development, backend APIs, and relational databases.
+QuickServe is a web-based platform that connects users with local service providers such as electricians, plumbers, cleaners, and other home services.
 
-📌 Project Overview
-In many cities, especially smaller cities, finding reliable service providers often depends on word-of-mouth or manual searching. This process can be inefficient and time-consuming.
+The platform simplifies the process of discovering, viewing, and booking local services through an easy-to-use interface.
 
-QuickServe aims to solve this problem by providing a centralized digital platform where users can easily discover and connect with local service providers.
+This project was developed as a full‑stack web application for a minor academic project, demonstrating the integration of frontend development, backend APIs, and database systems.
 
-The platform allows users to:
+---
 
-Browse available services
+##📌 Project Overview
+In many cities, especially smaller ones, finding reliable service providers often relies on word-of-mouth or manual searching.
 
-View providers based on category
+QuickServe aims to solve this problem by providing a centralized digital platform where users can:
 
-Book services easily
+• Browse available services
 
-Automatically notify providers when bookings are made
+• View service providers
 
-🎯 Current Features
+• Submit booking requests
+
+• Automatically notify providers via email
+
+---
+
+##✨ Current Features
 The current version of QuickServe (Minor Project Version) includes the following implemented features.
 
-📋 Service Category Listing
-Users can browse different types of services such as electricians, plumbers, and other local services.
+**📋 Service Category Listing**
+Users can browse different types of services such as:
 
-👨‍🔧 Provider Listing System
+• Electricians
+
+• Plumbers
+
+• Other local services
+
+---
+
+**👨‍🔧 Provider Listing System**
 The platform displays service providers along with important details such as:
 
-Provider Name
+• Provider Name
 
-Service Type
+• Service Type
 
-Contact Information
+• Contact Information
 
-Service Area
+• Service Area
 
-📅 Service Booking Interface
-Users can submit a booking request by providing necessary details through a booking form.
+---
 
-📧 Email Notification System
-When a booking is created, an email notification is automatically sent to the provider using Nodemailer.
+**📅 Service Booking Interface**
+Users can submit a booking request by filling out a booking form with necessary details.
 
-🔎 Category-Based Filtering
+---
+
+**📧 Email Notification System**
+When a booking is created, an automatic email notification is sent to the service provider using Nodemailer.
+
+---
+
+**🔎 Category-Based Filtering**
 Users can view providers based on selected service categories.
 
-💾 Database Integration
-All providers and booking data are stored in a MySQL database.
+---
 
-🔗 REST API Backend
-The backend is built using Node.js and Express.js, which exposes REST APIs for service listing and booking management.
+**💾 Database Integration**
+All providers and booking data are stored in a MySQL relational database.
 
-🌐 Simple Web Interface
-A clean interface built using HTML, CSS, and JavaScript allows users to easily navigate the platform.
+---
 
-🧩 System Architecture
-QuickServe follows a client-server architecture where the frontend communicates with the backend through REST APIs.
+**🔗 REST API Backend**
+The backend is built using Node.js and Express.js, which exposes REST APIs for:
+
+• service listing
+
+• booking management
+
+---
+
+**🌐 Simple Web Interface**
+A clean and simple interface built using:
+
+• HTML
+
+• CSS
+
+• JavaScript
+
+This allows users to easily navigate and interact with the platform.
+
+---
+
+##🧩 System Architecture
+QuickServe follows a client-server architecture.
 
 User (Browser)
       │
@@ -64,43 +107,51 @@ Frontend (HTML, CSS, JavaScript)
       │
       │ API Calls
       ▼
-Backend Server (Node.js + Express.js)
+Backend (Node.js + Express.js)
       │
       │ SQL Queries
       ▼
 MySQL Database
 This architecture separates:
 
-Presentation Layer (Frontend)
+**• Presentation Layer**
 
-Application Logic (Backend)
+**• Application Logic**
 
-Data Storage (Database)
+**• Data Storage**
 
-🛠️ Tech Stack
-Frontend
-HTML5
+making the application easier to maintain and scale.
 
-CSS3
+---
 
-JavaScript
+##🛠 Tech Stack
+**Frontend**
+• HTML5
 
-Backend
-Node.js
+• CSS3
 
-Express.js
+• JavaScript
 
-Database
-MySQL
+**Backend**
+• Node.js
 
-Tools & Platforms
-Git & GitHub
+• Express.js
 
-VS Code
+**Database**
+• MySQL
 
-Postman (API testing)
+**Tools**
+• Git
 
-📂 Project Structure
+• GitHub
+
+• VS Code
+
+• Postman
+
+---
+
+##📂 Project Structure
 QuickServe
 │
 ├── frontend
@@ -118,46 +169,64 @@ QuickServe
 │   └── package.json
 │
 └── README.md
-⚙️ Installation & Setup
-Follow the steps below to run the project locally.
 
-1️⃣ Clone the Repository
+---
+
+##⚙️ Installation & Setup
+**1️⃣ Clone the repository**
 git clone https://github.com/yourusername/QuickServe.git
-2️⃣ Navigate to Backend Folder
+
+---
+
+**2️⃣ Navigate to backend folder**
 cd backend
-3️⃣ Install Dependencies
+
+---
+
+**3️⃣ Install dependencies**
 npm install
-4️⃣ Configure Environment Variables
-Create a .env file in the backend directory and add the following:
+
+---
+
+**4️⃣ Configure environment variables**
+Create a .env file in the backend directory:
 
 DB_HOST=localhost
 DB_USER=root
-DB_PASSWORD=yourpassword
+DB_PASSWORD=your_database_password
 DB_NAME=quickserve
 PORT=5000
-5️⃣ Run the Backend Server
+
+---
+
+**5️⃣ Run the backend server**
 node server.js
-or using nodemon:
+or
 
 npx nodemon server.js
-6️⃣ Run the Frontend
-Open the frontend files in a browser or run them using a local development server.
 
-🔌 API Endpoints
-The backend exposes REST APIs to manage providers and bookings.
+---
 
-Get All Providers
+**6️⃣ Run the frontend**
+Open the frontend files in your browser or run them using a local server.
+
+##🔌 API Endpoints
+**Get All Providers**
 GET /api/providers
-Returns a list of available service providers.
+Returns a list of all service providers.
 
-Get Providers by Service Category
+---
+
+**Get Providers by Service Category**
 GET /api/providers/by-service/:service
 Example:
-
 GET /api/providers/by-service/electrician
-Create a Booking
+
+---
+
+**Create a Booking**
 POST /api/bookings
-Example Request Body:
+Example request body:
 
 {
   "providerId": 2,
@@ -165,70 +234,78 @@ Example Request Body:
   "bookingDate": "2025-01-15",
   "timeSlot": "10:00 AM - 12:00 PM"
 }
-📸 Screenshots
 
-Home Page
-<img width="1837" height="908" alt="Screenshot 2026-03-08 195127" src="https://github.com/user-attachments/assets/0ea03bc5-9613-4529-9e9b-30f1d82a2763" />
-<img width="1840" height="911" alt="Screenshot 2026-03-08 195222" src="https://github.com/user-attachments/assets/fa8f66b8-d478-40fa-8770-f13b33ee1662" />
-<img width="1834" height="907" alt="Screenshot 2026-03-08 195243" src="https://github.com/user-attachments/assets/9288053d-be8f-4870-84e5-f250b2442468" />
+---
 
-Service Categories and Sub Categories Page
-<img width="1832" height="907" alt="Screenshot 2026-03-08 195307" src="https://github.com/user-attachments/assets/1c64d2c6-b602-4794-a1d0-a20f9205417e" />
-<img width="1855" height="907" alt="Screenshot 2026-03-08 195347" src="https://github.com/user-attachments/assets/f84514c1-8acf-4d65-8367-6f60c9a0ace1" />
+##📸 Screenshots
 
-Provider Listing Page
-<img width="1835" height="908" alt="Screenshot 2026-03-08 195431" src="https://github.com/user-attachments/assets/dcd92ed1-0a01-4d9d-9532-a04230e94445" />
+**• Home Page**
+<img width="1837" height="908" alt="Screenshot 2026-03-08 195127" src="https://github.com/user-attachments/assets/f93a6ce3-b3e3-4767-841c-b811f128c22e" />
+<img width="1840" height="911" alt="Screenshot 2026-03-08 195222" src="https://github.com/user-attachments/assets/a6db80bb-51af-442a-9a2d-49539f8f6b47" />
+<img width="1834" height="907" alt="Screenshot 2026-03-08 195243" src="https://github.com/user-attachments/assets/360d3bff-397d-41a1-b631-4021b132b9d7" />
 
-Booking Interface
-<img width="1833" height="903" alt="Screenshot 2026-03-08 195615" src="https://github.com/user-attachments/assets/abb1fbb6-38ca-4a62-9781-1c006d4d9dd4" />
-<img width="1785" height="920" alt="Screenshot 2026-03-08 195709" src="https://github.com/user-attachments/assets/5702aa67-2eb0-45c7-ab6a-5515b726af1b" />
+**• Service Categories and Sub Categories**
+<img width="1832" height="907" alt="Screenshot 2026-03-08 195307" src="https://github.com/user-attachments/assets/4bcbf6b0-538a-4aac-aadd-2913c480b5c3" />
+<img width="1855" height="907" alt="Screenshot 2026-03-08 195347" src="https://github.com/user-attachments/assets/44a1bb66-6637-4e10-802f-8ff92a6a6739" />
 
-🧪 Testing
+**• Provider Listing**
+<img width="1835" height="908" alt="Screenshot 2026-03-08 195431" src="https://github.com/user-attachments/assets/43566851-7e4f-48a9-9dd9-cb78b6d1e9ad" />
+
+**• Booking Form**
+<img width="1833" height="903" alt="Screenshot 2026-03-08 195615" src="https://github.com/user-attachments/assets/715d09ed-d090-420e-a0dc-e5bcf4a40e8f" />
+
+**• Email Notification**
+<img width="1785" height="920" alt="Screenshot 2026-03-08 195709" src="https://github.com/user-attachments/assets/dfef4142-2370-4a14-b260-9856ef92a65e" />
+
+---
+
+##🧪 Testing
 The application was tested using:
 
-Postman for API testing
+• **Postman** for API testing
 
-Browser testing
+• Browser testing
 
-Local development environment
+• Local development environment
 
-🚧 Future Improvements
+---
+
+##🚧 Future Improvements
 The following features are planned for future development:
 
-User authentication system (Customer / Provider login)
+• User authentication system (Customer / Provider login)
 
-Admin dashboard
+• Admin dashboard
 
-Provider verification system
+• Provider verification
 
-Rating and review system
+• Rating and review system
 
-Location-based service filtering
+• Location-based service filtering
 
-Mobile application using React Native
+• Mobile application (React Native)
 
-Hindi language support
+• Hindi language support
 
-Booking status tracking
+• Online payment integration
 
-Online payment integration
+• Booking status tracking
 
-🌍 Real‑World Implementation
-QuickServe can be implemented in small and medium-sized cities where finding reliable service providers is often difficult.
+---
 
-By digitizing service discovery and booking, the platform can improve accessibility and efficiency for both customers and service providers.
+##👨‍💻 Contributors
+**Keshav Mishra**
+Project Lead / Backend Development, Testing & integration
 
-👨‍💻 Contributors
-Project developed by:
-
-Keshav Mishra
-Project Lead / Backend Development & Testing
-
-Sankalp sohgaura
+**Sankalp Sohgaura**
 Frontend Development 
 
-📜 License
-This project was developed for educational and learning purposes.
+---
 
-⭐ Support
+##📜 License
+This project is developed for educational and learning purposes.
+
+---
+
+##⭐ Support
 If you find this project useful, consider giving the repository a ⭐ on GitHub.
