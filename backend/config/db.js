@@ -1,19 +1,18 @@
 const mysql = require("mysql2");
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "keshav2004",        // your MySQL password
-  database: "servicehub"
+  uri: process.env.DB_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
-db.connect(err => {
+db.connect((err) => {
   if (err) {
-    console.error("DB Connection Failed:", err);
+    console.error("❌ DB Connection Failed:", err);
   } else {
-    console.log("✅ MySQL Connected to servicehub");
+    console.log("✅ MySQL Connected (Railway)");
   }
 });
 
 module.exports = db;
-
