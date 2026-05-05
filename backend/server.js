@@ -6,10 +6,12 @@ const cors = require("cors");
 // Routes
 const servicesRoutes = require("./routes/servicesRoutes");
 const providersRoutes = require("./routes/providersRoutes");
-const bookingsRoutes = require("./routes/bookingsRoutes"); // ✅ STEP 5 ADDED
+const bookingsRoutes = require("./routes/bookingsRoutes");
 
 const app = express();
-const PORT = 5001;
+
+// 🔥 FIX: Use dynamic port (Render requirement)
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
@@ -23,9 +25,9 @@ app.get("/", (req, res) => {
 // API Routes
 app.use("/api/services", servicesRoutes);
 app.use("/api/providers", providersRoutes);
-app.use("/api/bookings", bookingsRoutes); // ✅ STEP 5 ADDED
+app.use("/api/bookings", bookingsRoutes);
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
