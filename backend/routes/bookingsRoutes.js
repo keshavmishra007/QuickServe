@@ -7,9 +7,9 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "quickserve12345@gmail.com",      // 👈 same gmail used for app password
-    pass: "ktsbcbziytzxxksq" // 👈 app password (no spaces)
-  }
+  user: process.env.EMAIL_USER,
+  pass: process.env.EMAIL_PASS,
+}
 });
 
 router.post("/", (req, res) => {
