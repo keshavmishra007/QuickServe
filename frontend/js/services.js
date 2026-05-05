@@ -1,3 +1,8 @@
+const BASE_URL = "https://quickserve-5116.onrender.com/api";
+
+// ===============================
+// 1. GET CATEGORY FROM URL
+// ===============================
 const params = new URLSearchParams(window.location.search);
 const selectedCategory = params.get("category");
 
@@ -17,16 +22,15 @@ const modalProviderName = document.getElementById("modalProviderName");
 let selectedProviderId = null;
 
 // ===============================
-// 3. FETCH REAL PROVIDERS FROM BACKEND (✅ FIXED)
+// 3. FETCH REAL PROVIDERS FROM BACKEND
 // ===============================
 async function loadProviders() {
   try {
     providerList.innerHTML =
       `<p style="color:#aaa;text-align:center;">Loading providers...</p>`;
 
-    // ✅ CORRECT API (FILTERED)
     const res = await fetch(
-      `http://localhost:5001/api/providers/by-service/${encodeURIComponent(selectedCategory)}`
+      `${BASE_URL}/providers/by-service/${encodeURIComponent(selectedCategory)}`
     );
 
     const providers = await res.json();
@@ -99,7 +103,7 @@ window.onclick = function (event) {
 };
 
 // ===============================
-// 6. CONFIRM BOOKING (REAL API)
+// 6. CONFIRM BOOKING
 // ===============================
 async function confirmBooking(event) {
   event.preventDefault();
@@ -121,7 +125,7 @@ async function confirmBooking(event) {
   btn.style.background = "#555";
 
   try {
-    await fetch("http://localhost:5001/api/bookings", {
+    await fetch(`${BASE_URL}/bookings`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
