@@ -1,4 +1,4 @@
-POST http://localhost:5000/api/bookings
+POST https://quickserve-5116.onrender.com
 Content-Type: application/json
 
 {
